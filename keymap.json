@@ -1,0 +1,92 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+//
+// use "open key context view" context
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-t": "terminal_panel::Toggle",
+      // "space f": "file_finder::Toggle"
+    }
+  },
+
+  {
+    "context": "BufferSearchBar && !in_replace > Editor",
+    "bindings": {
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-b": "editor::MoveLeft",
+      "alt-f": "editor::MoveToNextWordEnd",
+      "alt-b": "editor::MoveToPreviousWordStart",
+      "ctrl-n": "search::PreviousHistoryQuery",
+      "ctrl-p": "search::NextHistoryQuery"
+    }
+  },
+
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "ctrl-t": "terminal_panel::Toggle"
+    }
+  },
+
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-x ctrl-s": "workspace::Save",
+      "ctrl-t": "terminal_panel::Toggle",
+    }
+  },
+
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "editor::Backspace",
+      "ctrl-j": "editor::Newline"
+    }
+  },
+
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-j": "editor::ConfirmCompletion",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-b": "editor::MoveLeft",
+      "alt-f": "editor::MoveToNextWordEnd",
+      "alt-b": "editor::MoveToPreviousWordStart"
+    }
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-j": null,
+      "ctrl-p": [
+        "terminal::SendKeystroke",
+        "ctrl-p"
+      ],
+      "ctrl-n": [
+        "terminal::SendKeystroke",
+        "ctrl-n"
+      ]
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "unbind": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "unbind": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  }
+]

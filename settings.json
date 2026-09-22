@@ -1,0 +1,219 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "vim": {
+    "cursor_shape": {
+
+    },
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": false
+  },
+  "zoomed_padding": true,
+  "active_pane_modifiers": {
+
+  },
+  "window_decorations": "client",
+  "centered_layout": {
+    "right_padding": null,
+    "left_padding": null
+  },
+  "bottom_dock_layout": "contained",
+  "debugger": {
+    "button": true
+  },
+  "search": {
+    "button": true
+  },
+  "diagnostics": {
+    "button": true
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "pending_keystrokes_indicator": true,
+    "line_endings_button": false,
+    "cursor_position_button": true,
+    "active_encoding_button": "non_utf8",
+    "active_language_button": true
+  },
+  "on_last_window_closed": "platform_default",
+  "on_new_window": "launchpad",
+  "use_system_window_tabs": false,
+  "preview_tabs": {
+    "enabled": true,
+    "enable_keep_preview_on_code_navigation": false,
+    "enable_preview_file_from_code_navigation": true,
+    "enable_preview_multibuffer_from_code_navigation": false,
+    "enable_preview_from_multibuffer": true,
+    "enable_preview_from_file_finder": false,
+    "enable_preview_from_project_panel": true
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_pinned_tabs_in_separate_row": false,
+    "show_tab_bar_buttons": false,
+    "show": true
+  },
+  "markdown_preview": {
+    "open_markdown_files_in_preview": true
+  },
+  "cursor_animation": {
+    "enabled": true
+  },
+  "prettier": {
+    "parser": "",
+    "allowed": false
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "languages": {
+    "Rust": {
+      "colorize_brackets": true
+    },
+    "Markdown": {
+      "show_edit_predictions": true
+    }
+  },
+  "auto_signature_help": false,
+  "cli_default_open_behavior": "existing_window",
+  "minimap": {
+    "max_width_columns": 50,
+    "show": "never"
+  },
+  "git": {
+    "inline_blame": {
+      "location": "status_bar",
+      "enabled": true
+    }
+  },
+  "enable_language_server": false,
+  "relative_line_numbers": "enabled",
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "mouse_wheel_zoom": true,
+  "accessible_mode": false,
+  "ui_font_size": 19.0,
+  "ui_font_family": "Comic Shanns",
+  "buffer_font_weight": 400.0,
+  "buffer_font_family": "Comic Mono",
+  "terminal": {
+    "open_links_in_mouse_mode": true,
+    "button": true,
+    "font_weight": 400.0,
+    "font_family": "Comic Mono"
+  },
+  "diff_view_style": "unified",
+  "git_panel": {
+    "group_by": "status",
+    "sort_by": "path",
+    "tree_view": false,
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "hide_root": true,
+    "dock": "left",
+    "button": true
+  },
+  "close_panel_on_toggle": false,
+  "window_title_format": "${projectName}${separator}${fileName}",
+  "focus_follows_mouse": {
+    "enabled": false
+  },
+  "tabs": {
+    "close_position": "right",
+    "show_close_button": "hover",
+    "show_diagnostics": "off",
+    "file_icons": false,
+    "git_status": false
+  },
+  "title_bar": {
+    "button_layout": "platform_default",
+    "show_menus": false,
+    "show_user_menu": true,
+    "show_sign_in": true,
+    "show_project_items": true,
+    "show_onboarding_banner": true,
+    "show_branch_name": true,
+    "show_branch_status_icon": false
+  },
+  "calls": {
+    "mute_on_join": false
+  },
+  "disable_ai": true,
+  "proxy": "",
+  "edit_predictions": {
+    "mode": "eager",
+    "provider": "zed"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": true,
+    "anthropic_retention": false
+  },
+  "vim_mode": true,
+  "base_keymap": "Zed",
+  "agent": {
+    "dock": "right",
+    "enable_feedback": false,
+    "button": false,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "icon_theme": {
+    "mode": "light",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Hard",
+  },
+  "theme_overrides": {
+    "Gruvbox Dark Hard": {
+      "accents": [
+        "#cc241dff",
+        "#98971aff",
+        "#d79921ff",
+        "#458588ff",
+        "#b16286ff",
+        "#689d6aff",
+        "#d65d0eff"
+      ],
+      "background": "#393634ff",
+      "surface.background": "#393634ff",
+      "status_bar.background": "#1d2021ff",
+      "title_bar.background": "#1d2021ff",
+      "tab.inactive_background": "#393634ff",
+      "panel.background": "#1d2021ff",
+      "syntax": {
+        "constant": {
+          "color": "#d3869bff"
+        },
+        "property": {
+          "color": "#83a598ff"
+        },
+        "punctuation.bracket": {
+          "color": "#FE8019FF"
+        },
+        "variable": {
+          "color": "#83a598ff"
+        },
+        "variable.parameter": {
+          "color": "#83a598ff"
+        }
+      }
+    }
+  }
+}
