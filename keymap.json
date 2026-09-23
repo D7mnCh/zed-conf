@@ -6,20 +6,37 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 
+// NOTE
 // use "open key context view" context
 // if there's conflicts in bindings, the more general context wins
+
 [
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
       "ctrl-j": "editor::ConfirmCompletion",
       "ctrl-t": "terminal_panel::Toggle",
-      "ctrl-space": "editor::Cancel",
-    },
+      "ctrl-space": "editor::Cancel"
+    }
   },
 
   {
-    "context": "BufferSearchBar && !in_replace > Editor",
+    "context": "BufferSearchBar > Editor",
+    "bindings": {
+      "ctrl-h": "editor::Backspace",
+      "ctrl-j": "vim::SearchSubmit",
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-b": "editor::MoveLeft",
+      "alt-f": "editor::MoveToNextWordEnd",
+      "alt-b": "editor::MoveToPreviousWordStart"
+    }
+  },
+
+  {
+    "context": "BufferSearchBar && in_replace > Editor",
     "bindings": {
       "ctrl-h": "editor::Backspace",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
@@ -33,6 +50,17 @@
   },
 
   {
+    "context": "Picker > Editor",
+    "bindings": {
+      "ctrl-j": "menu::Confirm",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-b": "editor::MoveLeft",
+      "alt-f": "editor::MoveToNextWordEnd",
+      "alt-b": "editor::MoveToPreviousWordStart"
+    }
+  },
+
+  {
     "context": "Editor && vim_mode == visual",
     "bindings": {
       "ctrl-t": "terminal_panel::Toggle"
@@ -42,8 +70,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-x ctrl-s": "workspace::Save",
-      "ctrl-t": "terminal_panel::Toggle",
+      "ctrl-t": "terminal_panel::Toggle"
     }
   },
 
@@ -51,15 +78,8 @@
     "context": "Editor && showing_completions && vim_mode == insert",
     "bindings": {
       "ctrl-j": "editor::ConfirmCompletion",
-      "ctrl-space": "editor::Cancel",
+      "ctrl-space": "editor::Cancel"
     }
-  },
-
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "ctrl-j": "project_panel::OpenPermanent",
-    },
   },
 
   {
@@ -71,6 +91,13 @@
       "ctrl-b": "editor::MoveLeft",
       "alt-f": "editor::MoveToNextWordEnd",
       "alt-b": "editor::MoveToPreviousWordStart"
+    }
+  },
+
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "ctrl-j": "project_panel::OpenPermanent"
     }
   },
 
@@ -88,34 +115,62 @@
       ]
     }
   },
+
   {
     "context": "FileFinder || FileFinder > Picker > Editor",
     "unbind": {
       "ctrl-p": "file_finder::Toggle"
     }
   },
-  {
-    "context": "FileFinder || FileFinder > Picker > Editor",
-    // "unbind": {
-    //   "ctrl-p": "file_finder::Toggle"
-    // }
-  },
+
   {
     "context": "Workspace",
     "unbind": {
       "ctrl-j": "workspace::ToggleBottomDock"
     }
   },
+
   {
     "context": "Workspace",
     "bindings": {
       "alt-h": "workspace::ToggleLeftDock"
     }
   },
+
   {
     "context": "Workspace",
     "unbind": {
       "ctrl-b": "workspace::ToggleLeftDock"
+    }
+  },
+
+  {
+    "context": "Editor && mode == full && !menu",
+    "bindings": {
+      "ctrl-alt-h": "buffer_search::DeployReplace"
+    }
+  },
+
+  {
+    "context": "Editor && mode == full && !menu",
+    "unbind": {
+      "ctrl-h": "buffer_search::DeployReplace"
+    }
+  },
+
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "ctrl-alt-h": "search::ToggleReplace"
+    },
+    "unbind": {
+      "ctrl-h": "search::ToggleReplace"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-alt-h": "editor::DeleteToPreviousSubwordStart"
     }
   }
 ]
