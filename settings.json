@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "completions": {
+    "lsp_fetch_timeout_ms": 0
+  },
+  "show_completions_on_input": false,
+  "use_autoclose": false,
   "vim": {
     "cursor_shape": {
 
@@ -92,7 +97,7 @@
       "enabled": true
     }
   },
-  "enable_language_server": false,
+  "enable_language_server": true,
   "relative_line_numbers": "enabled",
   "sticky_scroll": {
     "enabled": false
@@ -120,11 +125,15 @@
     "dock": "left"
   },
   "project_panel": {
+    "auto_reveal_entries": true,
+    "auto_open": {
+      "on_paste": true,
+      "on_create": true
+    },
     "hide_root": true,
     "dock": "left",
     "button": true
   },
-  "close_panel_on_toggle": false,
   "window_title_format": "${projectName}${separator}${fileName}",
   "focus_follows_mouse": {
     "enabled": false

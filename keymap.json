@@ -5,20 +5,23 @@
 //
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
-//
+
 // use "open key context view" context
+// if there's conflicts in bindings, the more general context wins
 [
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
+      "ctrl-j": "editor::ConfirmCompletion",
       "ctrl-t": "terminal_panel::Toggle",
-      // "space f": "file_finder::Toggle"
-    }
+      "ctrl-space": "editor::Cancel",
+    },
   },
 
   {
     "context": "BufferSearchBar && !in_replace > Editor",
     "bindings": {
+      "ctrl-h": "editor::Backspace",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
       "ctrl-f": "editor::MoveRight",
       "ctrl-b": "editor::MoveLeft",
@@ -45,17 +48,25 @@
   },
 
   {
-    "context": "Editor",
+    "context": "Editor && showing_completions && vim_mode == insert",
     "bindings": {
-      "ctrl-h": "editor::Backspace",
-      "ctrl-j": "editor::Newline"
+      "ctrl-j": "editor::ConfirmCompletion",
+      "ctrl-space": "editor::Cancel",
     }
   },
 
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
-      "ctrl-j": "editor::ConfirmCompletion",
+      "ctrl-j": "project_panel::OpenPermanent",
+    },
+  },
+
+  {
+    "context": "Editor && vim_mode == insert && !showing_completions",
+    "bindings": {
+      "ctrl-h": "editor::Backspace",
+      "ctrl-j": "editor::Newline",
       "ctrl-f": "editor::MoveRight",
       "ctrl-b": "editor::MoveLeft",
       "alt-f": "editor::MoveToNextWordEnd",
@@ -85,8 +96,26 @@
   },
   {
     "context": "FileFinder || FileFinder > Picker > Editor",
+    // "unbind": {
+    //   "ctrl-p": "file_finder::Toggle"
+    // }
+  },
+  {
+    "context": "Workspace",
     "unbind": {
-      "ctrl-p": "file_finder::Toggle"
+      "ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-h": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-b": "workspace::ToggleLeftDock"
     }
   }
 ]
