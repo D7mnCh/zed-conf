@@ -72,7 +72,7 @@
     "open_markdown_files_in_preview": true
   },
   "cursor_animation": {
-    "enabled": true
+    "enabled": false
   },
   "prettier": {
     "parser": "",

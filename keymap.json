@@ -23,6 +23,19 @@
   },
 
   {
+    "context": "Editor && !VimControl",
+    "bindings": {
+      "ctrl-h": "editor::Backspace",
+      "ctrl-j": "vim::SearchSubmit",
+      "ctrl-w": "editor::DeleteToPreviousSubwordStart",
+      "ctrl-f": "editor::MoveRight",
+      "ctrl-b": "editor::MoveLeft",
+      "alt-f": "editor::MoveToNextSubwordEnd",
+      "alt-b": "editor::MoveToPreviousSubwordStart"
+    }
+  },
+
+  {
     "context": "BufferSearchBar > Editor",
     "bindings": {
       "ctrl-h": "editor::Backspace",
@@ -30,8 +43,8 @@
       "ctrl-w": "editor::DeleteToPreviousSubwordStart",
       "ctrl-f": "editor::MoveRight",
       "ctrl-b": "editor::MoveLeft",
-      "alt-f": "editor::MoveToNextWordEnd",
-      "alt-b": "editor::MoveToPreviousWordStart"
+      "alt-f": "editor::MoveToNextSubwordEnd",// start not the end of
+      "alt-b": "editor::MoveToPreviousSubwordStart"
     }
   },
 
@@ -42,8 +55,8 @@
       "ctrl-w": "editor::DeleteToPreviousSubwordStart",
       "ctrl-f": "editor::MoveRight",
       "ctrl-b": "editor::MoveLeft",
-      "alt-f": "editor::MoveToNextWordEnd",
-      "alt-b": "editor::MoveToPreviousWordStart",
+      "alt-f": "editor::MoveToNextSubwordEnd",
+      "alt-b": "editor::MoveToPreviousSubwordStart",
       "ctrl-n": "search::PreviousHistoryQuery",
       "ctrl-p": "search::NextHistoryQuery"
     }
@@ -56,8 +69,8 @@
       "ctrl-f": "editor::MoveRight",
       "ctrl-w": "editor::DeleteToPreviousSubwordStart",
       "ctrl-b": "editor::MoveLeft",
-      "alt-f": "editor::MoveToNextWordEnd",
-      "alt-b": "editor::MoveToPreviousWordStart"
+      "alt-f": "editor::MoveToNextSubwordEnd",
+      "alt-b": "editor::MoveToPreviousSubwordStart"
     }
   },
 
@@ -91,8 +104,8 @@
       "ctrl-w": "editor::DeleteToPreviousSubwordStart",
       "ctrl-f": "editor::MoveRight",
       "ctrl-b": "editor::MoveLeft",
-      "alt-f": "editor::MoveToNextWordEnd",
-      "alt-b": "editor::MoveToPreviousWordStart"
+      "alt-f": "editor::MoveToNextSubwordEnd",
+      "alt-b": "editor::MoveToPreviousSubwordStart"
     }
   },
 
@@ -127,21 +140,12 @@
 
   {
     "context": "Workspace",
-    "unbind": {
-      "ctrl-j": "workspace::ToggleBottomDock"
-    }
-  },
-
-  {
-    "context": "Workspace",
     "bindings": {
-      "alt-h": "workspace::ToggleLeftDock"
-    }
-  },
-
-  {
-    "context": "Workspace",
+      "alt-h": "workspace::ToggleLeftDock",
+      "ctrl-alt-j": "workspace::ToggleBottomDock"
+    },
     "unbind": {
+      "ctrl-j": "workspace::ToggleBottomDock",
       "ctrl-b": "workspace::ToggleLeftDock"
     }
   },
@@ -176,15 +180,5 @@
     "unbind": {
       "ctrl-alt-h": "editor::DeleteToPreviousSubwordStart"
     }
-  },
-
-  {
-    "context": "VimControl && !menu && vim_mode != operator",
-    "bindings": {
-      "w": "vim::NextSubwordStart",
-      "b": "vim::PreviousSubwordStart",
-      "e": "vim::NextSubwordEnd",
-      "g e": "vim::PreviousSubwordEnd",
-    },
   },
 ]
