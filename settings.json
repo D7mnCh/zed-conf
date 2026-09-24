@@ -96,6 +96,7 @@
     "show": "never"
   },
   "git": {
+    "diff_base": "default_branch",
     "inline_blame": {
       "location": "status_bar",
       "enabled": true
@@ -126,7 +127,7 @@
     "dock": "left"
   },
   "outline_panel": {
-    "multi_buffer_hide_symbols": true,
+    "auto_reveal_entries": true,
     "dock": "left"
   },
   "project_panel": {
