@@ -176,7 +176,7 @@
     "max_width_columns": 50
   },
   "git": {
-    "diff_base": "default_branch",
+    "diff_base": "head",
     "inline_blame": {
       "location": "status_bar",
       "enabled": true
@@ -300,7 +300,7 @@
   "buffer_font_size": 15,
   "theme": {
     "mode": "dark",
-    "light": "One Light",
+    "light": "Gruvbox Light Soft",
     "dark": "Gruvbox Dark Hard",
   },
 
@@ -404,39 +404,39 @@
             "status_bar.background": "#1b1a19",
 
             "success": "#b8bb26",
-            "success.background": "#302d2b",
+            // "success.background": "#302d2b",
             "success.border": "#737718",
 
             "warning": "#fabd2f",
-            "warning.background": "#302d2b",
+            // "warning.background": "#302d2b",
             "warning.border": "#9b7620",
 
             "error": "#fb4934",
-            "error.background": "#302d2b",
+            // "error.background": "#302d2b",
             "error.border": "#9f3026",
 
             "info": "#83a598",
-            "info.background": "#302d2b",
+            // "info.background": "#302d2b",
             "info.border": "#526b78",
 
             "hint": "#8ec07c",
-            "hint.background": "#302d2b",
+            // "hint.background": "#302d2b",
             "hint.border": "#587c52",
 
             "conflict": "#fe8019",
-            "conflict.background": "#302d2b",
+            // "conflict.background": "#302d2b",
             "conflict.border": "#a65316",
 
             "created": "#b8bb26",
-            "created.background": "#302d2b",
+            // "created.background": "#302d2b",
             "created.border": "#737718",
 
             "modified": "#fabd2f",
-            "modified.background": "#302d2b",
+            // "modified.background": "#302d2b",
             "modified.border": "#9b7620",
 
             "deleted": "#fb4934",
-            "deleted.background": "#302d2b",
+            // "deleted.background": "#302d2b",
             "deleted.border": "#9f3026",
 
             "renamed": "#83a598",
@@ -452,7 +452,7 @@
             "hidden.border": "#302d2b",
 
             "predictive": "#8ec07c",
-            "predictive.background": "#211f1e",
+            // "predictive.background": "#211f1e",
             "predictive.border": "#587c52",
 
             "unreachable": "#7c6f64",
