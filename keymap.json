@@ -214,5 +214,10 @@
     "bindings": {
       "shift-y": "vim::YankToEndOfLine"
     }
+  },
+  {
+    "bindings": {
+      "alt-/": "vim::SearchUnderCursor"
+    }
   }
 ]
