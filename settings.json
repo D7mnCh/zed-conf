@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "buffer_font_size": 13.0,
+    "ui_font_size": 13.0,
+    "soft_wrap_indent": "same",
+    "preferred_line_length": 80,
     "agent_buffer_font_family": "Comic Mono",
     "redact_private_values": false,
     "tab_size": 4,
@@ -125,7 +129,7 @@
         "button": true
     },
     "status_bar": {
-        "show_active_file": true,
+        "show_active_file": false,
         "pending_keystrokes_indicator": true,
         "line_endings_button": false,
         "cursor_position_button": true,
@@ -135,6 +139,7 @@
     "on_last_window_closed": "platform_default",
     "use_system_window_tabs": false,
     "preview_tabs": {
+        "enable_preview_from_file_finder": false,
         "enabled": true,
         "enable_keep_preview_on_code_navigation": false,
         "enable_preview_file_from_code_navigation": true,
@@ -203,9 +208,9 @@
     "diff_view_style": "unified",
     "git_panel": {
         "starts_open": false,
-        "group_by": "status",
+        "group_by": "staging",
         "sort_by": "path",
-        "tree_view": false,
+        "tree_view": true,
         "dock": "left"
     },
     "outline_panel": {
@@ -272,10 +277,6 @@
     },
     "disable_ai": true,
     "proxy": "",
-    "edit_predictions": {
-        "mode": "eager",
-        "provider": "zed"
-    },
     "telemetry": {
         "metrics": false,
         "diagnostics": true,
@@ -283,13 +284,6 @@
     },
     "vim_mode": true,
     "base_keymap": "Zed",
-    "agent": {
-        "dock": "right",
-        "enable_feedback": false,
-        "button": false,
-        "favorite_models": [],
-        "model_parameters": []
-    },
     "icon_theme": {
         "mode": "light",
         "light": "Colored Zed Icons Theme Dark",
@@ -315,10 +309,8 @@
 
             "vim.normal.background": "#83A598A3",
             "vim.normal.foreground": "#A2FCDAA3",
-
             "vim.insert.background": "#9b7620",
             "vim.insert.foreground": "#fabd2f",
-
             "vim.visual.background": "#85596a",
             "vim.visual.foreground": "#d3869b",
             "vim.visual_block.background": "#85596a",
@@ -478,7 +470,7 @@
             "terminal.bright_foreground": "#ebdbb2",
             "terminal.dim_foreground": "#a89984",
 
-            "terminal.ansi.background": "#151515",
+            // "terminal.ansi.background": "#151515", // overide erros as magenta
 
             "terminal.ansi.black": "#1d2021",
             "terminal.ansi.red": "#fb4934",

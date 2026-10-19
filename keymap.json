@@ -7,12 +7,19 @@
 // from the command palette.
 
 // NOTE
-// use "open key context view" context
 // if there's conflicts in bindings, the more general context wins
 
 [
-  {
-    "context": "Editor && vim_mode == normal || vim_mode == visual",
+    // doesn't work
+    {
+        "context": "Editor && (vim_mode == normal || vim_mode == visual) && showing_code_actions",
+        "bindings": {
+            "ctrl-j": "editor::ConfirmCodeAction"
+        }
+    },
+
+    {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
@@ -131,6 +138,9 @@
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "ctrl-j": "project_panel::OpenPermanent"
+    },
+    "unbind": {
+      "ctrl-p": "menu::SelectPrevious"
     }
   },
 
@@ -159,7 +169,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "alt-h": "workspace::ToggleLeftDock",
+      "ctrl-alt-h": "workspace::ToggleLeftDock",
       "ctrl-alt-j": "workspace::ToggleBottomDock"
     },
     "unbind": {
@@ -171,7 +181,7 @@
   {
     "context": "Editor && mode == full && !menu",
     "bindings": {
-      "ctrl-alt-h": "buffer_search::DeployReplace"
+      "ctrl-shift-alt-r": "buffer_search::DeployReplace"
     }
   },
 
@@ -185,7 +195,7 @@
   {
     "context": "BufferSearchBar",
     "bindings": {
-      "ctrl-alt-h": "search::ToggleReplace",
+      "ctrl-shift-alt-r": "search::ToggleReplace",
       "ctrl-p": "search::PreviousHistoryQuery",
       "ctrl-n": "search::NextHistoryQuery",
     },
@@ -219,5 +229,5 @@
     "bindings": {
       "alt-/": "vim::SearchUnderCursor"
     }
-  }
+  },
 ]
