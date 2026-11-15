@@ -230,4 +230,32 @@
       "alt-/": "vim::SearchUnderCursor"
     }
   },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-k w": [
+        "pane::CloseAllItems",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-k w": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-i": "vim::Indent"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-t": "vim::Indent"
+    }
+  }
 ]
